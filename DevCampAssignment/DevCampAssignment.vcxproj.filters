@@ -18,5 +18,19 @@
     <ClCompile Include="logo_print.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="LetterM.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="LetterW.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="LetterM.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="LetterW.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

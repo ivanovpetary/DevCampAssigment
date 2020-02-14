@@ -1,4 +1,9 @@
 #include <iostream>
+#include "ctype.h"
+
+#include "LetterW.h"
+#include "LetterM.h"
+
 using namespace std;
 
 // Function for getting and checking user entered number
@@ -17,78 +22,59 @@ int get_user_number(int usr_num)
 	}
 }
 
-// Function creating upper part of the letter M
-void UpperPart(int usr_num, int row)
+// Function for picking letter for print
+char pick_letter_for_print(char letterPrint)
 {
-	int emptySpace, letterPart;
+	while (true)
+	{
+		cout << "Please pick letter to print! \n";
+		cin >> letterPrint;
 
-	for (emptySpace = 0; emptySpace < usr_num - row; emptySpace++)
-		cout << "-";
-	for (letterPart = 0; letterPart < usr_num + (row * 2); letterPart++)
-		cout << "*";
-	for (emptySpace = 0; emptySpace < usr_num - (row * 2); emptySpace++)
-		cout << "-";
-	for (letterPart = 0; letterPart < usr_num + (row * 2); letterPart++)
-		cout << "*";
-	for (emptySpace = 0; emptySpace < usr_num - row; emptySpace++)
-		cout << "-";
-
-}
-
-// Function creating bottom part of the letter M
-void BottomPart(int usr_num, int row)
-{
-	int emptySpace, letterPart;
-
-	for (emptySpace = 0; emptySpace < usr_num - row; emptySpace++)
-		cout << "-";
-	for (letterPart = 0; letterPart < usr_num; letterPart++)
-		cout << "*";
-	for (emptySpace = 0; emptySpace < (row * 2) - usr_num; emptySpace++)
-		cout << "-";
-	for (letterPart = 0; letterPart < usr_num + ((usr_num - row) * 2); letterPart++)
-		cout << "*";
-	for (emptySpace = 0; emptySpace < (row * 2) - usr_num; emptySpace++)
-		cout << "-";
-	for (letterPart = 0; letterPart < usr_num; letterPart++)
-		cout << "*";
-	for (emptySpace = 0; emptySpace < usr_num - row; emptySpace++)
-		cout << "-";
-}
-
-// Function for printing the logo MM
-void logo_print(int usr_num)
-{
-	int i;
-
-	for (i = 0; i <= usr_num; i++)
-		if (i < (usr_num + 1) / 2)
+		if (isalpha(letterPrint))
 		{
-			UpperPart(usr_num, i);
-			UpperPart(usr_num, i);
-			cout << endl;
+			return letterPrint;
 		}
 		else
 		{
-			BottomPart(usr_num, i);
-			BottomPart(usr_num, i);
-			cout << endl;
+			cout << "Please pick a LETTER! \n";
+			continue;
 		}
-}
 
+	}
+
+
+	return letterPrint;
+}
 // This is the main function
 int main()
 {
 	int usr_num = 0;
+	char letterPrint{ ' ' };
 
 	usr_num = get_user_number(usr_num);
+	letterPrint = pick_letter_for_print(letterPrint);
 
 	cout << "N";
 	cout << " = ";
 	cout << usr_num;
 	cout << endl;
+	cout << "You pick letter: ";
+	cout << letterPrint;
+	cout << endl;
+	cout << endl;
 
-	logo_print(usr_num);
+	if (letterPrint == 'm' || letterPrint == 'M')
+	{
+		logo_print_m(usr_num);
+	}
+	else if (letterPrint == 'w' || letterPrint == 'W')
+	{
+		logo_print_w(usr_num);
+	}
+	else
+	{
+		cout << "Still in devolepment! \n";
+	}
 
 	system("pause");
 	return 0;
