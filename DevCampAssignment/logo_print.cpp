@@ -1,6 +1,7 @@
 #include <iostream>
 #include "ctype.h"
 
+#include "LetterL.h"
 #include "LetterM.h"
 #include "LetterN.h"
 #include "LetterW.h"
@@ -64,7 +65,11 @@ int main()
 	cout << endl;
 	cout << endl;
 
-	if (letterPrint == 'm' || letterPrint == 'M')
+	if (letterPrint == 'l' || letterPrint == 'L')
+	{
+		logo_print_l(usr_num);
+	}
+	else if (letterPrint == 'm' || letterPrint == 'M')
 	{
 		logo_print_m(usr_num);
 	}

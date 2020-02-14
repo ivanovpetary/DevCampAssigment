@@ -138,12 +138,14 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="LetterL.cpp" />
     <ClCompile Include="LetterM.cpp" />
     <ClCompile Include="LetterN.cpp" />
     <ClCompile Include="LetterW.cpp" />
     <ClCompile Include="logo_print.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="LetterL.h" />
     <ClInclude Include="LetterM.h" />
     <ClInclude Include="LetterN.h" />
     <ClInclude Include="LetterW.h" />
