@@ -139,11 +139,13 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="LetterM.cpp" />
+    <ClCompile Include="LetterN.cpp" />
     <ClCompile Include="LetterW.cpp" />
     <ClCompile Include="logo_print.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="LetterM.h" />
+    <ClInclude Include="LetterN.h" />
     <ClInclude Include="LetterW.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

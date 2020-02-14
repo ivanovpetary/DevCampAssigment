@@ -1,8 +1,9 @@
 #include <iostream>
 #include "ctype.h"
 
-#include "LetterW.h"
 #include "LetterM.h"
+#include "LetterN.h"
+#include "LetterW.h"
 
 using namespace std;
 
@@ -66,6 +67,10 @@ int main()
 	if (letterPrint == 'm' || letterPrint == 'M')
 	{
 		logo_print_m(usr_num);
+	}
+	else if (letterPrint == 'n' || letterPrint == 'N')
+	{
+		logo_print_n(usr_num);
 	}
 	else if (letterPrint == 'w' || letterPrint == 'W')
 	{

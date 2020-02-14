@@ -42,7 +42,7 @@ void BottomPartM(int usr_num, int row)
 		cout << "-";
 }
 
-// Function for printing the logo MM
+// Function for printing letter M
 void logo_print_m(int usr_num)
 {
 	int i;
@@ -51,13 +51,11 @@ void logo_print_m(int usr_num)
 		if (i < (usr_num + 1) / 2)
 		{
 			UpperPartM(usr_num, i);
-			//UpperPartM(usr_num, i);
 			cout << endl;
 		}
 		else
 		{
 			BottomPartM(usr_num, i);
-			//BottomPartM(usr_num, i);
 			cout << endl;
 		}
 }

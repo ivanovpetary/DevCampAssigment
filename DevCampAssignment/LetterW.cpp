@@ -4,7 +4,7 @@
 using namespace std;
 
 // Function creating upper part of the letter W
-void UpperPart(int usr_num, int row)
+void UpperPartW(int usr_num, int row)
 {
 	int emptySpace, letterPart;
 
@@ -25,7 +25,7 @@ void UpperPart(int usr_num, int row)
 }
 
 // Function creating bottom part of the letter W
-void BottomPart(int usr_num, int row)
+void BottomPartW(int usr_num, int row)
 {
 	int emptySpace, letterPart;
 
@@ -41,7 +41,7 @@ void BottomPart(int usr_num, int row)
 		cout << "-";
 }
 
-// Function for printing the logo MM
+// Function for printing letter W
 void logo_print_w(int usr_num)
 {
 	int i;
@@ -49,16 +49,12 @@ void logo_print_w(int usr_num)
 	for (i = 0; i <= usr_num; i++)
 		if (i < (usr_num + 1) / 2)
 		{
-			UpperPart(usr_num, i);
-			//UpperPart(usr_num, i);
+			UpperPartW(usr_num, i);
 			cout << endl;
-			//continue;
 		}
 		else
 		{
-			BottomPart(usr_num, i);
-			//BottomPart(usr_num, i);
+			BottomPartW(usr_num, i);
 			cout << endl;
-			//break;
 		}
 }
